@@ -10,6 +10,11 @@ export class Provider extends Component {
     ], 
     heading: 'Top 10 Tracks'
   }
+
+  componentDidMount() {
+    
+  }
+
   render() {
     return (
       <Context.Provider value={this.state}>
