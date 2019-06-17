@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'; 
 import Spinner from '../layout/Spinner';
+import {Link} from 'react-router-dom'; 
 
 export class Lyrics extends Component {
   // MAKING TWO REQUESTS FROM ONE COMPONENT 
@@ -38,15 +39,20 @@ export class Lyrics extends Component {
     if (track === undefined || lyrics === undefined || Object.keys(track).length === 0 || Object.keys(lyrics).length === 0) {
       return <Spinner/>
     } else {
-      return <h1>Data returned</h1>
+      return (
+        <React.Fragment>
+          <Link to="/" className="btn btn-dark btn-sm mb-4">Go Back</Link>
+          <div className="card">
+            <h5 className="card-header">
+              {track.track_name} by <span className="text-secondary">{track.artist_name}</span>
+            </h5>
+            <div className="card-body">
+              <p className="card-text">{lyrics.lyrics_body}</p>
+            </div>
+          </div>
+        </React.Fragment>
+      )
     }
-
-
-    return (
-      <div>
-        <h1>Lyrics </h1>
-      </div>
-    )
   }
 }
 
