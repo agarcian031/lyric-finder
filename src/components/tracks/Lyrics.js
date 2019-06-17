@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+import axios from 'axios'; 
+import Spinner from '../layout/Spinner';
 
 export class Lyrics extends Component {
   // MAKING TWO REQUESTS FROM ONE COMPONENT 
@@ -34,7 +35,11 @@ export class Lyrics extends Component {
 
   render() {
     const {track, lyrics} = this.state; 
-    if (track === undefined || lyrics === undefined || Object.keys(track).length === 0 || Object.keys(lyrics).length === 0)
+    if (track === undefined || lyrics === undefined || Object.keys(track).length === 0 || Object.keys(lyrics).length === 0) {
+      return <Spinner/>
+    } else {
+      return <h1>Data returned</h1>
+    }
 
 
     return (
