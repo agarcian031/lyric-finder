@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Spinner from "../layout/Spinner";
 import { Link } from "react-router-dom";
+import Moment from 'react-moment'; 
 
 export class Lyrics extends Component {
   // MAKING TWO REQUESTS FROM ONE COMPONENT
@@ -56,6 +57,14 @@ export class Lyrics extends Component {
             <li className="list-group-item">
               <strong>Song Genre</strong>: {track.primary_genres.music_genre_list[0].music_genre.music_genre_name}
             </li>
+            <li className="list-group-item">
+              <strong>Explicit Words</strong>: {track.explicit === 0 ? 'No' : 'Yes'}
+            </li>
+            <li className="list-group-item">
+              <strong>Release Date</strong>:<Moment format="MM/DD/YYYY">{track.first_release_date}</Moment>
+            </li>
+            
+
           </ul>
         </React.Fragment>
       );
