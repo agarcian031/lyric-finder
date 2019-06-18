@@ -61,7 +61,7 @@ export class Lyrics extends Component {
               <strong>Explicit Words</strong>: {track.explicit === 0 ? 'No' : 'Yes'}
             </li>
             <li className="list-group-item">
-              <strong>Release Date</strong>:<Moment format="MM/DD/YYYY">{track.first_release_date}</Moment>
+              <strong>Release Date</strong>: <Moment format="MM/DD/YYYY">{track.first_release_date}</Moment>
             </li>
             
 

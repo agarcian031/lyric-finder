@@ -3,10 +3,25 @@ import axios from 'axios';
 
 const Context = React.createContext(); 
 
+// it will return the state, will change the track_list to be whatever the action.payload is and will change the heading to be search results. 
+const reducer = (state, action) => {
+  switch(action.type) {
+    case 'SEARCH_TRACKS': 
+    return {
+      ...state, 
+      track_list: action.payload, 
+      heading: 'Search Results'
+    }; 
+    default: 
+    return state; 
+  }
+}
+
 export class Provider extends Component {
   state = {
     track_list: [], 
-    heading: 'Top 10 Tracks'
+    heading: 'Top 10 Tracks',
+    dispatch: action => this.setState(state => reducer(state, action))
   }
 
   componentDidMount() {
