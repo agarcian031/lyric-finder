@@ -8,7 +8,7 @@ const Track = (props) => {
       <div className="card mb-4 shadow-sm">
         <div className="card-body">
           <h5>{track.artist_name}</h5>
-          <hr/>
+          <hr/> 
           <p className="card-text">
             <strong><i className="fas fa-play"></i>Track</strong>: {track.track_name}
           </p>
