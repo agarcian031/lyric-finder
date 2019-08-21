@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lyric-finder/static/css/main.65938976.chunk.css",
+    "main.js": "/lyric-finder/static/js/main.09be9962.chunk.js",
+    "main.js.map": "/lyric-finder/static/js/main.09be9962.chunk.js.map",
+    "runtime~main.js": "/lyric-finder/static/js/runtime~main.3ec70798.js",
+    "runtime~main.js.map": "/lyric-finder/static/js/runtime~main.3ec70798.js.map",
+    "static/js/2.fbc50638.chunk.js": "/lyric-finder/static/js/2.fbc50638.chunk.js",
+    "static/js/2.fbc50638.chunk.js.map": "/lyric-finder/static/js/2.fbc50638.chunk.js.map",
+    "index.html": "/lyric-finder/index.html",
+    "precache-manifest.04bea3c3c60da8191046c5576997883e.js": "/lyric-finder/precache-manifest.04bea3c3c60da8191046c5576997883e.js",
+    "service-worker.js": "/lyric-finder/service-worker.js",
+    "static/css/main.65938976.chunk.css.map": "/lyric-finder/static/css/main.65938976.chunk.css.map"
+  }
+}
